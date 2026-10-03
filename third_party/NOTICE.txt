@@ -1,0 +1,5 @@
+# Upstream Notices
+
+Qwen3-VL-8B-Instruct: Qwen Team, Apache-2.0. See Apache-2.0.txt and https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct.
+
+GLM-4.6V-Flash: Z.ai, model card declares MIT. See https://huggingface.co/zai-org/GLM-4.6V-Flash. The GLM-V software repository has separate Apache-2.0 terms; do not conflate software licensing with the model-card declaration. Original model cards are retained in third_party/.

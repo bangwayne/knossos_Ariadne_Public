@@ -1,0 +1,11 @@
+{
+  "id": "knossos-glm46v-three-stage-v1",
+  "model_type": "glm4v",
+  "architecture": "NODE -> EDGE-only; NODE + fixed EDGE -> TRACE-5",
+  "sha256": {
+    "backbone_config": "ef88f66ef623085cd86f5fd14bd6647a0b7175b9a25773049b82611d4ac82181",
+    "node_adapter": "18b1be6a2b5f101c5f8da7b41f05f40ff4e77f2eb703460528ba808ac9f322f7",
+    "edge_adapter": "7c68631ee72edb29752493ed364aae80ad6281dd907877cf93f3b3190d6cd0ab",
+    "trace_adapter": "99f81e3bf7dfac259106a32e59141d8d59f3a089095bc7899e6dac72925ba604"
+  }
+}

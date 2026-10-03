@@ -1,0 +1,53 @@
+{
+  "python": "3.12",
+  "pillow": "11.3.0",
+  "source_pool_size_per_domain": 6000,
+  "assembly_seed": 20260609,
+  "screening_seed": 20260610,
+  "foodweb_adjustment_seed": 20260614,
+  "domains": {
+    "foodweb": {
+      "entrypoint": "knossos_foodweb_v0/scripts/generate_dataset.py",
+      "seed": 2026,
+      "source_root": "knossos_foodweb_v0/outputs/Knossos-FoodWeb-v0-6000-adaptive",
+      "asset_pool": "assets/generated_node_images_style_validation/renderer_asset_pool"
+    },
+    "network": {
+      "entrypoint": "knossos_network_v1/scripts/generate_network_6000_split.py",
+      "seed": 2050,
+      "source_root": "knossos_network_v1/outputs/Knossos-Network-v1-6000-dense-adaptive-color",
+      "asset_pool": "knossos_network_v1/assets/renderer_asset_pool"
+    },
+    "workflow": {
+      "entrypoint": "knossos_workflow_v1/scripts/generate_dataset.py",
+      "seed": 4100,
+      "source_root": "knossos_workflow_v1/outputs/Knossos-Workflow-v1-6000-v2-adaptive-scale",
+      "asset_pool": null
+    },
+    "natural_process": {
+      "entrypoint": "knossos_natural_process_v1/scripts/generate_dataset.py",
+      "seed": 9000,
+      "source_root": "knossos_natural_process_v1/outputs/Knossos-NaturalProcess-v1-6000-adaptive-arrow",
+      "asset_pool": "knossos_natural_process_v1/assets/renderer_asset_pool"
+    },
+    "circuit": {
+      "entrypoint": "knossos_circuit_v1/scripts/generate_dataset.py",
+      "seed": 5200,
+      "source_root": "knossos_circuit_v1/outputs/Knossos-Circuit-v1-6000-layered-mixed-unified-resolution",
+      "asset_pool": "knossos_circuit_v1/assets/renderer_asset_pool"
+    },
+    "map_route": {
+      "entrypoint": "knossos_map_v1/scripts/generate_dataset.py",
+      "seed": 8120,
+      "source_root": "knossos_map_v1/outputs/Knossos-MapRoute-v2-map85-direction-mix-canvaspool-split6000",
+      "asset_pool": "knossos_map_v1/assets/renderer_asset_pool",
+      "layout_mode": "map85"
+    }
+  },
+  "pipeline_files": [
+    "scripts/build_final_before_screen_dataset.py",
+    "scripts/run_balanced_visual_screening.py",
+    "scripts/adjust_foodweb_max_difficult.py",
+    "scripts/run_gpt4o_visual_qa.py"
+  ]
+}

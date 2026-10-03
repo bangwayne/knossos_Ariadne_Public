@@ -1,0 +1,117 @@
+dataset:
+  name: Knossos-Network-v1
+  canvas:
+    width: 1000
+    height: 700
+  target_total_samples: 3600
+  splits:
+    train:
+      total: 3000
+      difficulty_ratio:
+        simple: 0.30
+        medium: 0.55
+        difficult: 0.15
+      counts:
+        simple: 900
+        medium: 1650
+        difficult: 450
+    val:
+      total: 300
+      difficulty_ratio:
+        simple: 0.10
+        medium: 0.60
+        difficult: 0.30
+      counts:
+        simple: 30
+        medium: 180
+        difficult: 90
+    test:
+      total: 300
+      difficulty_ratio:
+        simple: 0.10
+        medium: 0.60
+        difficult: 0.30
+      counts:
+        simple: 30
+        medium: 180
+        difficult: 90
+
+assets:
+  renderer_asset_pool: knossos_network_v1/assets/renderer_asset_pool
+  labels: 40
+  styles:
+    textbook_icon:
+      variants_per_label: 2
+      background: white
+    realistic_device:
+      variants_per_label: 2
+      background: white_or_light_neutral
+    workplace_scene:
+      variants_per_label: 2
+      background: natural_it_workspace
+
+difficulty:
+  simple:
+    nodes: [5, 8]
+    edges: [4, 9]
+    edge_type_ratio:
+      undirected: 1.00
+      bidirectional: 0.00
+      directed: 0.00
+    negative_edges: [0, 0]
+    topology:
+      - star
+      - tree
+      - ring
+  medium:
+    nodes: [9, 14]
+    edges: [9, 18]
+    edge_type_ratio:
+      undirected: 0.95
+      bidirectional: 0.00
+      directed: 0.05
+    negative_edges: [1, 1]
+    topology:
+      - ring
+      - tree
+      - cluster_bridge
+      - mesh
+      - bus
+  difficult:
+    nodes: [14, 17]
+    edges: [16, 24]
+    edge_type_ratio:
+      undirected: 0.92
+      bidirectional: 0.00
+      directed: 0.08
+    negative_edges: [2, 4]
+    topology:
+      - cluster_bridge
+      - bus
+      - ring
+
+topology_families:
+  - star
+  - ring
+  - mesh
+  - tree
+  - cluster_bridge
+  - bus
+
+graph_schema:
+  id_rule: reading_order_top_to_bottom_then_left_to_right
+  keep_bbox: true
+  undirected_final_graph: expand_bidirectionally
+  bidirectional_final_graph: reserved_not_used_in_v1_preview
+  relation_fields:
+    - source
+    - source_name
+    - target
+    - target_name
+    - type
+  think_fields:
+    - NODE
+    - CHECK_NODE
+    - TRACE
+    - EDGE
+    - NO_EDGE

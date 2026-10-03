@@ -1,0 +1,16 @@
+{
+  "glm46v": {
+    "repo_id": "zai-org/GLM-4.6V-Flash",
+    "revision": "411bb4d77144a3f03accbf4b780f5acb8b7cde4e",
+    "local_name": "GLM-4.6V-Flash",
+    "declared_model_license": "mit",
+    "weight_shards_match_server": true
+  },
+  "qwen3vl8b": {
+    "repo_id": "Qwen/Qwen3-VL-8B-Instruct",
+    "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+    "local_name": "Qwen3-VL-8B-Instruct",
+    "declared_model_license": "apache-2.0",
+    "weight_shards_match_server": true
+  }
+}

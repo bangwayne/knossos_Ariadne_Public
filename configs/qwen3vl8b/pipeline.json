@@ -1,0 +1,11 @@
+{
+  "id": "knossos-qwen3vl8b-three-stage-v1",
+  "model_type": "qwen3_vl",
+  "architecture": "NODE -> EDGE-only; NODE + fixed EDGE -> TRACE-5",
+  "sha256": {
+    "backbone_config": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+    "node_adapter": "b37e3da84aa0bce2cae6d5b2737676c3a7710a16229ac0f8d226e35ab627d4f3",
+    "edge_adapter": "14b09f835e64d2182c6d8a76c63d0635e9a07219a1d800b0d95b80cb2dcba976",
+    "trace_adapter": "6a240ab9055110cd7eb32da396434db4337d80aa058af011a96471b8c1c31d6c"
+  }
+}

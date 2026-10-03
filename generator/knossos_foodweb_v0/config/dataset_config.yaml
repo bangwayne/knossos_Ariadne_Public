@@ -1,0 +1,120 @@
+dataset:
+  name: Knossos-FoodWeb-v0
+  canvas:
+    width: 1000
+    height: 700
+  total_samples: 6000
+  splits:
+    train:
+      total: 5000
+      difficulty_ratio:
+        simple: 0.30
+        medium: 0.55
+        difficult: 0.15
+      counts:
+        simple: 1500
+        medium: 2750
+        difficult: 750
+    val:
+      total: 500
+      difficulty_ratio:
+        simple: 0.10
+        medium: 0.60
+        difficult: 0.30
+      counts:
+        simple: 50
+        medium: 300
+        difficult: 150
+    test:
+      total: 500
+      difficulty_ratio:
+        simple: 0.10
+        medium: 0.60
+        difficult: 0.30
+      counts:
+        simple: 50
+        medium: 300
+        difficult: 150
+
+assets:
+  renderer_asset_pool: knossos_foodweb_v0/assets/renderer_asset_pool
+  labels: 40
+  styles:
+    cartoon_icon:
+      variants_per_label: 2
+      background: white
+    realistic_cutout:
+      variants_per_label: 2
+      background: white
+    natural_scene:
+      variants_per_label: 2
+      background: natural
+
+difficulty:
+  simple:
+    nodes: [6, 8]
+    edges: [5, 10]
+    edge_types: [directed]
+    negative_edges: [0, 0]
+  medium:
+    nodes: [9, 15]
+    edges: [8, 18]
+    edge_types: [directed, bidirectional]
+    negative_edges: [1, 1]
+  difficult:
+    nodes: [16, 20]
+    edges: [15, 22]
+    edge_types: [directed, bidirectional]
+    negative_edges: [2, 3]
+    visual_scale: small_nodes_small_text_small_arrows
+
+visual_randomization:
+  image_scale:
+    simple: [0.80, 0.86, 0.92, 0.98]
+    medium: [0.90, 0.96, 1.00, 1.06]
+    difficult: [1.00, 1.06, 1.12]
+  orientations:
+    - bottom_to_top
+    - top_to_bottom
+    - left_to_right
+    - right_to_left
+  label_case:
+    - upper
+    - lower
+    - title
+    - source
+  backgrounds:
+    - white
+    - off_white
+    - pale_blue
+    - pale_green
+    - light_grid
+  edge_colors:
+    - blue
+    - black
+    - green
+    - purple
+    - teal
+    - brown_red
+
+graph_schema:
+  id_rule: reading_order_top_to_bottom_then_left_to_right
+  keep_bbox: true
+  relation_fields:
+    - source
+    - source_name
+    - target
+    - target_name
+    - type
+  think_fields:
+    - NODE
+    - CHECK_NODE
+    - TRACE
+    - EDGE
+    - NO_EDGE
+
+validation:
+  require_no_missing_assets: true
+  require_no_bbox_overlap: true
+  require_directed_arrowheads: true
+  require_valid_relation_refs: true

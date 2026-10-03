@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+.venv/
+.cache/
+*.log
+/data/
+/models/
+/outputs/
+/artifacts/
+/full_experiments/manifests/
+**/renderer_asset_pool/
+**/assets/pilot_raw/
+**/assets/full_raw/
