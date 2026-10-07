@@ -149,6 +149,8 @@ API-based asset generation and visual screening require your own credentials.
 
 ## Citation
 
+Please cite the following papers when using this resource:
+
 ```bibtex
 @misc{guo2026knossos,
   title={Knossos and Ariadne: Benchmarking and Learning Complete Diagram Topology Extraction with Vision-Language Models},
@@ -158,6 +160,13 @@ API-based asset generation and visual screening require your own credentials.
   archivePrefix={arXiv},
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2610.04721}
+}
+
+@article{guo2026topoagent,
+  title={TopoAgent: A Structure-Aware Perception-to-Reasoning Framework for Diagram-to-Graph Topology Extraction with Large Vision-Language Models},
+  author={Guo, Bangwei and Zhao, Xujiang and Liu, Yanchi and Cheng, Wei and Chen, Shengyu and Li, Dongyue and Morimoto, Masaharu and Kuroda, Takayuki and Metaxas, Dimitris and Chen, Haifeng},
+  journal={arXiv preprint arXiv:2608.28701},
+  year={2026}
 }
 ```
 
