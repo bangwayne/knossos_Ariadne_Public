@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Knossos and Ariadne: Benchmarking and Learning Complete Diagram Topology Extraction with Vision-Language Models. Paper, code, and dataset.">
+  <meta property="og:title" content="Knossos and Ariadne">
+  <meta property="og:description" content="Benchmarking and Learning Complete Diagram Topology Extraction with Vision-Language Models">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bangwayne.github.io/knossos_Ariadne_Public/">
+  <meta property="og:image" content="https://bangwayne.github.io/knossos_Ariadne_Public/assets/knossos-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="citation_title" content="Knossos and Ariadne: Benchmarking and Learning Complete Diagram Topology Extraction with Vision-Language Models">
+  <meta name="citation_author" content="Bangwei Guo">
+  <meta name="citation_author" content="Xujiang Zhao">
+  <meta name="citation_author" content="Shengyu Chen">
+  <meta name="citation_author" content="Yanchi Liu">
+  <meta name="citation_author" content="Wei Cheng">
+  <meta name="citation_author" content="Xi Zhu">
+  <meta name="citation_author" content="Guoning Zhang">
+  <meta name="citation_author" content="Dimitris N. Metaxas">
+  <meta name="citation_author" content="Haifeng Chen">
+  <meta name="citation_publication_date" content="2026/10/03">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2610.04721">
+  <link rel="canonical" href="https://bangwayne.github.io/knossos_Ariadne_Public/">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Knossos and Ariadne</title>
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to content</a>
+  <main>
+    <header class="publication-header container">
+      <h1><span>Knossos and Ariadne:</span> Benchmarking and Learning Complete Diagram Topology Extraction with Vision-Language Models</h1>
+      <div class="authors" aria-label="Authors">
+        <span><a href="https://openreview.net/profile?id=~Bangwei_Guo1">Bangwei Guo</a><sup>1</sup>,</span>
+        <span><a href="https://openreview.net/profile?id=~Xujiang_Zhao1">Xujiang Zhao</a><sup>2</sup>,</span>
+        <span><a href="https://openreview.net/profile?id=~Shengyu_Chen1">Shengyu Chen</a><sup>3</sup>,</span>
+        <span><a href="https://openreview.net/profile?id=~Yanchi_Liu1">Yanchi Liu</a><sup>3</sup>,</span>
+        <span><a href="https://openreview.net/profile?id=~Wei_Cheng1">Wei Cheng</a><sup>3</sup>,</span>
+        <span><a href="https://openreview.net/profile?id=~Xi_Zhu2">Xi Zhu</a><sup>1</sup>,</span>
+        <span><a href="https://openreview.net/profile?id=~Guoning_Zhang1">Guoning Zhang</a><sup>1</sup>,</span>
+        <span><a href="https://openreview.net/profile?id=~Dimitris_N._Metaxas1">Dimitris N. Metaxas</a><sup>1</sup>,</span>
+        <span><a href="https://openreview.net/profile?id=~Haifeng_Chen1">Haifeng Chen</a><sup>3</sup></span>
+      </div>
+      <p class="affiliations"><span><sup>1</sup>Rutgers University</span><span><sup>2</sup>Meta</span><span><sup>3</sup>NEC Labs America</span></p>
+      <div class="publication-links">
+        <a class="resource-button" href="https://arxiv.org/abs/2610.04721"><img src="assets/icons/file-text.svg" alt="" width="18" height="18">Paper</a>
+        <a class="resource-button" href="https://github.com/bangwayne/knossos_Ariadne_Public"><img src="assets/icons/github.svg" alt="" width="18" height="18">Code</a>
+        <a class="resource-button" href="https://huggingface.co/datasets/WayneGuo0011/Knossos"><img src="assets/icons/database.svg" alt="" width="18" height="18">Dataset</a>
+      </div>
+    </header>
+
+    <figure class="teaser container">
+      <div class="domain-grid">
+        <figure><figcaption>Food Web</figcaption><a href="assets/foodweb.png" target="_blank" rel="noopener" aria-label="Open full-resolution Food Web example"><img src="assets/foodweb.png" width="900" height="630" alt="Food Web diagram with labeled entities and directed connections"></a></figure>
+        <figure><figcaption>Network</figcaption><a href="assets/network.png" target="_blank" rel="noopener" aria-label="Open full-resolution Network example"><img src="assets/network.png" width="900" height="630" alt="Network diagram with devices and communication links"></a></figure>
+        <figure><figcaption>Workflow</figcaption><a href="assets/workflow.png" target="_blank" rel="noopener" aria-label="Open full-resolution Workflow example"><img src="assets/workflow.png" width="630" height="900" alt="Workflow diagram with branching and merging process steps"></a></figure>
+        <figure><figcaption>Natural Process</figcaption><a href="assets/natural_process.png" target="_blank" rel="noopener" aria-label="Open full-resolution Natural Process example"><img src="assets/natural_process.png" width="900" height="630" alt="Natural Process diagram with legend-defined typed relations" loading="lazy"></a></figure>
+        <figure><figcaption>Circuit</figcaption><a href="assets/circuit.png" target="_blank" rel="noopener" aria-label="Open full-resolution Circuit example"><img src="assets/circuit.png" width="900" height="630" alt="Circuit diagram with components and wire, signal, and ground relations" loading="lazy"></a></figure>
+        <figure><figcaption>Map Route</figcaption><a href="assets/map_route.png" target="_blank" rel="noopener" aria-label="Open full-resolution Map Route example"><img src="assets/map_route.png" width="630" height="900" alt="Map Route diagram with landmarks and typed paths" loading="lazy"></a></figure>
+      </div>
+      <figcaption class="teaser-caption"><strong>Knossos</strong> is a six-domain benchmark for extracting topology structure from diagrams, with complete annotations of nodes, typed connections, and connector geometry.</figcaption>
+    </figure>
+
+    <section class="section abstract-section" id="abstract" aria-labelledby="abstract-title">
+      <div class="text-container">
+        <h2 id="abstract-title">Abstract</h2>
+        <p>Structural diagrams are widely used to represent complex systems and relational information across scientific, engineering, procedural, and spatial domains. Recent vision-language models (VLMs) have become increasingly capable of recognizing diagram elements and reasoning about their content, while complete diagram topology extraction remains comparatively underexplored. In this paper, we study <strong>diagram-to-graph topology extraction</strong>: extracting all diagram entities and the complete relations among them.</p>
+        <p>To enable large-scale supervised training and systematic evaluation of this task, we introduce <strong>Knossos</strong>, a benchmark of 19,200 diagrams across six diverse domains, with 245,179 nodes and 439,740 edges. Its symbolic generation process provides exact alignment between rendered diagrams and annotations of complete topology, relation types, and connector geometry. To address the modeling challenge of complete topology extraction, we also present <strong>Ariadne</strong>, a structured framework that decomposes the task into node inventory extraction and source-conditioned edge prediction.</p>
+        <p>Extensive experiments show that training on Knossos substantially improves complete topology extraction in smaller open-source VLMs. Ariadne further improves over one-step extraction under matched supervision, demonstrating the additional benefit of structured decomposition. It achieves the highest average Edge F1 among the evaluated methods on Knossos, while both backbone variants also improve over their unadapted counterparts on the real-world external benchmark.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="method" aria-labelledby="method-title">
+      <h2 id="method-title">Ariadne</h2>
+      <p class="section-description">Ariadne first builds a node inventory, then predicts outgoing edges for small source groups while retaining all nodes as candidate targets. The predictions are validated and merged into the complete graph. A separate trace predictor provides geometric grounding after the edge set is fixed.</p>
+      <figure class="method-figure"><a href="assets/ariadne-method.png" target="_blank" rel="noopener" aria-label="Open full-resolution Ariadne method figure"><img src="assets/ariadne-method.png" width="2200" height="744" alt="Ariadne: input diagram, node inventory, source-group edge extraction, validation and merging, and a separate trace predictor" loading="lazy"></a></figure>
+    </section>
+
+    <section class="section dataset-section" id="dataset" aria-labelledby="dataset-title">
+      <div class="text-container">
+        <h2 id="dataset-title">Knossos</h2>
+        <p>The complete benchmark contains <strong>18,000 training diagrams</strong> and <strong>1,200 test diagrams</strong> across Food Web, Network, Workflow, Natural Process, Circuit, and Map Route. Images and annotations are generated from a shared symbolic representation, covering simple, medium, and difficult structures.</p>
+        <p>The dataset and annotations are available on <a href="https://huggingface.co/datasets/WayneGuo0011/Knossos">Hugging Face</a>. The generation, training, inference, and evaluation code is available on <a href="https://github.com/bangwayne/knossos_Ariadne_Public">GitHub</a>.</p>
+      </div>
+    </section>
+
+    <section class="section citation-section text-container" id="citation" aria-labelledby="citation-title">
+      <div class="citation-heading"><h2 id="citation-title">BibTeX</h2><button id="copy-citation" type="button" aria-label="Copy BibTeX citation" title="Copy BibTeX citation"><img src="assets/icons/copy.svg" alt="" width="19" height="19"></button></div>
+      <pre><code id="bibtex">@misc{guo2026knossos,
+  title={Knossos and Ariadne: Benchmarking and Learning Complete Diagram Topology Extraction with Vision-Language Models},
+  author={Bangwei Guo and Xujiang Zhao and Shengyu Chen and Yanchi Liu and Wei Cheng and Xi Zhu and Guoning Zhang and Dimitris N. Metaxas and Haifeng Chen},
+  year={2026},
+  eprint={2610.04721},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2610.04721}
+}</code></pre>
+      <p id="copy-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer><div class="text-container"><p><a href="https://arxiv.org/abs/2610.04721">Paper</a><span aria-hidden="true">&middot;</span><a href="https://github.com/bangwayne/knossos_Ariadne_Public">Code</a><span aria-hidden="true">&middot;</span><a href="https://huggingface.co/datasets/WayneGuo0011/Knossos">Dataset</a></p><p>Code: <a href="https://github.com/bangwayne/knossos_Ariadne_Public/blob/main/LICENSE-CODE.txt">MIT</a> &middot; Dataset: <a href="https://huggingface.co/datasets/WayneGuo0011/Knossos/blob/main/LICENSE-DATA.txt">CC BY 4.0</a></p></div></footer>
+</body>
+</html>

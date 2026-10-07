@@ -5,6 +5,7 @@
 <p align="center"><strong>A six-domain benchmark for extracting topology structure from diagrams.</strong></p>
 
 <p align="center">
+  <a href="https://bangwayne.github.io/knossos_Ariadne_Public/"><img src="https://img.shields.io/badge/Project-Page-167BBB?style=for-the-badge" alt="Project Page"></a>
   <a href="https://github.com/bangwayne/knossos_Ariadne_Public"><img src="https://img.shields.io/badge/GitHub-Code-24292F?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub Code"></a>
   <a href="https://huggingface.co/datasets/WayneGuo0011/Knossos"><img src="https://img.shields.io/badge/Hugging_Face-Dataset-FFD21E?style=for-the-badge&amp;logo=huggingface&amp;logoColor=black" alt="Hugging Face Dataset"></a>
   <a href="https://arxiv.org/abs/2610.04721"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white" alt="arXiv Paper"></a>
