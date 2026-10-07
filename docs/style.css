@@ -12,7 +12,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--link); outline-
 .text-container { width: min(850px, calc(100% - 64px)); margin-inline: auto; }
 .skip-link { position: fixed; top: -100px; left: 20px; z-index: 10; background: #fff; padding: 10px 16px; }
 .skip-link:focus { top: 12px; }
-.publication-header { text-align: center; padding-top: 66px; padding-bottom: 46px; }
+.publication-header { position: relative; isolation: isolate; text-align: center; padding-top: 66px; padding-bottom: 46px; }
+.publication-header::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url("assets/knossos-banner.png") center bottom / auto calc(100% + 240px) no-repeat; opacity: .2; }
+.publication-content { position: relative; }
+.publication-header .authors a { color: #145a80; }
 h1 { max-width: 1060px; margin-inline: auto; font-size: 43px; line-height: 1.19; font-weight: 650; text-wrap: balance; }
 h1 > span { display: block; }
 .authors { display: flex; justify-content: center; flex-wrap: wrap; gap: 3px 8px; max-width: 920px; margin: 28px auto 0; font-size: 19px; line-height: 1.65; }
