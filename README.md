@@ -1,13 +1,30 @@
 ![Knossos](assets/knossos-banner-v2.png)
 
+<h1 align="center">Knossos &amp; Ariadne</h1>
+
 <p align="center"><strong>A six-domain benchmark for extracting topology structure from diagrams.</strong></p>
 
 <p align="center">
-  <a href="https://huggingface.co/datasets/WayneGuo0011/Knossos">Dataset on Hugging Face</a> &middot;
+  <a href="https://github.com/bangwayne/knossos_Ariadne_Public"><img src="https://img.shields.io/badge/GitHub-Code-24292F?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub Code"></a>
+  <a href="https://huggingface.co/datasets/WayneGuo0011/Knossos"><img src="https://img.shields.io/badge/Hugging_Face-Dataset-FFD21E?style=for-the-badge&amp;logo=huggingface&amp;logoColor=black" alt="Hugging Face Dataset"></a>
+  <a href="https://arxiv.org/abs/2610.04721"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white" alt="arXiv Paper"></a>
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2610.04721"><strong>Knossos and Ariadne: Benchmarking and Learning Complete Diagram Topology Extraction with Vision-Language Models</strong></a>
+</p>
+
+<p align="center">
+  Bangwei Guo &middot; Xujiang Zhao &middot; Shengyu Chen &middot; Yanchi Liu &middot; Wei Cheng<br>
+  Xi Zhu &middot; Guoning Zhang &middot; Dimitris N. Metaxas &middot; Haifeng Chen
+</p>
+
+<p align="center">
+  <a href="#dataset-overview">Dataset Overview</a> &middot;
   <a href="#quickstart">Quickstart</a> &middot;
   <a href="#ariadne">Ariadne</a> &middot;
   <a href="#code-and-assets">Code and Assets</a> &middot;
-  <a href="#license">License</a>
+  <a href="#citation">Citation</a>
 </p>
 
 **Knossos** provides **18,000 training diagrams** and **1,200 test diagrams**
@@ -128,6 +145,20 @@ python tools/evaluate_knossos_node_edge_typed_pipeline_vlm.py \
 Generator entrypoints and settings are listed in
 [`generator/generation_config.json`](generator/generation_config.json).
 API-based asset generation and visual screening require your own credentials.
+
+## Citation
+
+```bibtex
+@misc{guo2026knossos,
+  title={Knossos and Ariadne: Benchmarking and Learning Complete Diagram Topology Extraction with Vision-Language Models},
+  author={Bangwei Guo and Xujiang Zhao and Shengyu Chen and Yanchi Liu and Wei Cheng and Xi Zhu and Guoning Zhang and Dimitris N. Metaxas and Haifeng Chen},
+  year={2026},
+  eprint={2610.04721},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2610.04721}
+}
+```
 
 ## License
 
